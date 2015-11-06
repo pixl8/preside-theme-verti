@@ -2,7 +2,7 @@
 	site 	 		    = event.getSite();
 	footer_description  = site.footer_description;
 	id                  = site.id;
-	footer_links 		= event.getPageProperty(propertyname="footerlink_category"	, cascading=true);
+	footerlinks 		= site.footer_links;
 	socialmedia 	    = site.footer_socialmedia;
 </cfscript>
 
@@ -12,22 +12,15 @@
 		<footer id="footer" class="container">
 			<div class="row">
 
-				<cfif IsQuery(footer_links) and footer_links.recordcount>
-					<cfloop query="footer_links">
-
+				<cfif !IsEmpty( footerlinks )>
+					<cfloop list="#footerlinks#" item="item">
 						<div class="3u 6u(medium) 12u$(small)">
 
-							<!-- Links -->
-							<section class="widget links">
-								<h3>#label#</h3>
-								<ul class="style2">
-									#renderview(presideobject="footerlink_category", view="/general/_link-item", filter={ id = footer_links.id }, orderby="sort_order asc")#
-								</ul>
-							</section>
-
+							#renderview(presideobject="footerlink_category", view="/general/_link-item", filter={ id = item }, orderby="sort_order asc")#
 						</div>
 					</cfloop>
 				</cfif>
+
 
 
 				<div class="3u 6u$(medium) 12u$(small)">
