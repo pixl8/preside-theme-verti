@@ -2,7 +2,8 @@ component extends="preside.system.config.Config" output=false {
 
     public void function configure( required struct config ) {
 
-        var conf = arguments.config;
+        var conf     = arguments.config;
+        var settings = conf.settings ?: {};
 
         conf.layoutSettings               = conf.layoutSettings ?: {};
         conf.layoutSettings.defaultLayout = "verti.cfm";
