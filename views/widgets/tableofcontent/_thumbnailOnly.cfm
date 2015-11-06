@@ -25,7 +25,7 @@
 						<div class="6u">
 							<a href="#event.buildlink(page=args.id)#" class="image fit">
 								<cfif !isEmpty(args.main_image)>
-									#renderAsset(assetId = args.main_image, args={derivative="toc_thumbnailSmall"})#
+									#renderAsset(assetId = args.main_image, args={derivatives="toc_thumbnailSmall"})#
 								<cfelse>
 									<img src="/assets/img/pic04.jpg" alt="" />
 								</cfif>

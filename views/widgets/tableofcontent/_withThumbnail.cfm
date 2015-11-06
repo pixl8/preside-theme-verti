@@ -15,7 +15,7 @@
 		<section class="box feature">
 			<a href="#event.buildlink(page=args.id)#" class="image featured">
 				<cfif !isEmpty(args.main_image)>
-					#renderAsset(assetId = args.main_image, args={derivative="toc_thumbnail"})#
+					#renderAsset(assetId = args.main_image, args={derivatives="toc_thumbnail"})#
 				<cfelse>
 					<img src="/assets/img/pic01.jpg" alt="" />
 				</cfif>
