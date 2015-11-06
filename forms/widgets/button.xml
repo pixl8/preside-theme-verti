@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form i18nBaseUri="widgets.button:">
+	<tab>
+		<fieldset>
+			<field name="button_label" control="textinput" />
+			<field name="button_size"  control="select" values="normal,big" labels="Normal,Big" />
+			<field name="button_class" control="textinput" />
+			<field name="button_link"  control="textinput" />
+		</fieldset>
+	</tab>
+</form>
