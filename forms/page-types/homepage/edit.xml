@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form i18nBaseUri="page-types.homepage:">
+
+	<tab id="main">
+		<fieldset id="main">
+			<field sortorder="40" binding="homepage.banner_left"   control="richeditor" />
+			<field sortorder="50" binding="homepage.banner_right"  control="richeditor" />
+
+			<field sortorder="50" binding="homepage.middle_content" control="richeditor" />
+
+			<field sortorder="60" binding="homepage.bottom_left"  control="richeditor" />
+			<field sortorder="70" binding="homepage.bottom_right" control="richeditor" />
+
+			<field binding="page.sidebar_content" deleted="true" />
+			<field binding="page.main_image"    deleted="true" />
+			<field binding="page.main_content"  deleted="true" />
+			<field binding="page.teaser"        deleted="true" />
+			<field binding="page.subheading"    deleted="true" />
+
+		</fieldset>
+	</tab>
+
+
+
+</form>

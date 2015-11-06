@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form i18nBaseUri="site:">
+	<tab id="analytics" sortorder="15" title="preside-objects.site:analytics.tab.title">
+		<fieldset id="analytics" sortorder="10">
+			<field binding="site.google_analytics_tags"             sortorder="10" control="textarea" />
+			<field binding="site.google_analytics_verification_tag" sortorder="20" control="textarea" />
+		</fieldset>
+	</tab>
+
+	<tab id="global" sortorder="15" title="preside-objects.site:global.tab.title">
+		<fieldset id="global" sortorder="10">
+
+			<field binding="site.logo_title"     sortorder="10" control="textinput" placeholder="Verti"/>
+			<field binding="site.logo_subtitle"  sortorder="20" control="textinput" placeholder="by HTML5 Up"/>
+
+			<field binding="site.footer_links" sortorder="30" control="objectpicker" object="footerlink_category" sortable="true" quickadd="true" multiple="true" quickedit="true" />
+
+			<field binding="site.footer_socialmedia" sortorder="40" control="objectpicker" object="social_media" sortable="true" quickadd="true" quickedit="true" multiple="true" />
+			<field binding="site.footer_description" sortorder="50" control="richeditor" />
+		</fieldset>
+	</tab>
+</form>

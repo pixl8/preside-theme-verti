@@ -1,0 +1,258 @@
+// define global less mixins here
+@base-font: 'Open Sans', sans-serif;
+@myriad-font: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+
+@xs-portrait: ~" only screen and (max-width: 479px)";
+@xs-portrait-wider: ~" only screen and (max-width: 579px)";
+@xs: ~" only screen and (max-width: 767px)";
+@sm-min: ~" only screen and (min-width: 768px)";
+@sm: ~" only screen and (max-width: 991px)";
+@md-min: ~" only screen and (min-width: 992px)";
+@md: ~" only screen and (max-width: 1199px)";
+@lg-min: ~" only screen and (min-width: 1200px)";
+@lg: ~" only screen and (max-width: 1400px)";
+@retina: ~" only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)";
+@tablet-landscape: ~" only screen and (max-width: 1024px)";
+@desktop-min: ~" only screen and (min-width: 1025px)";
+
+.clearfix() {
+
+    &:before,
+    &:after {
+
+        content: " "; /* 1 */
+        display: table; /* 2 */
+
+    }
+
+    &:after {
+
+        clear: both;
+
+    }
+
+}
+
+.placeholders(@color: #ccc) {
+
+	&::-webkit-input-placeholder { color: @color; }
+    &::-moz-placeholder { color: @color; }
+    &:-moz-placeholder { color: @color; }
+
+}
+
+.border-radius(@rad: 5px) {
+
+	-webkit-border-radius: @rad;
+	-moz-border-radius: @rad;
+	border-radius: @rad;
+
+}
+
+.box-shadow (@string) {
+
+    -webkit-box-shadow: @string;
+    -moz-box-shadow:    @string;
+    box-shadow:         @string;
+
+}
+
+.transition (@transition) {
+
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+    transition:         @transition;
+
+}
+
+.transform (@transform) {
+
+    -webkit-transform: @transform;
+    -moz-transform:    @transform;
+    -ms-transform:     @transform;
+    -o-transform:      @transform;
+    transform:         @transform;
+
+}
+
+.animation (@animation) {
+
+    -webkit-animation: @animation;
+    -moz-animation:    @animation;
+    -ms-animation:     @animation;
+    -o-animation:      @animation;
+    animation:         @animation;
+
+}
+
+.keyframes(@name; @arguments) {
+    @-moz-keyframes @name { @arguments(); }
+    @-webkit-keyframes @name { @arguments(); }
+    @keyframes @name { @arguments(); }
+}
+
+.box-sizing (@string: border-box) {
+
+    -webkit-box-sizing: @string;
+    -moz-box-sizing: @string;
+    box-sizing: @string;
+
+}
+
+.rgba(@colour, @alpha) {
+
+    @alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+    @ieAlphaColour: argb(@alphaColour);  
+ 
+    background-color: @colour; // Fallback for older browsers 
+    background-color: @alphaColour; 
+     
+    .lt-ie9 & {
+
+        background-color: transparent;
+        // IE hacks
+        zoom: 1; // hasLayout
+        background-color: transparent\9;
+        filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; // IE 6 & 7
+
+    } 
+ 
+}
+
+.opacity(@opacity1, @opacity2) {
+
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="@opacity2")";
+
+    /* IE 5-7 */
+    filter: alpha(opacity=@opacity2);
+
+    /* Netscape */
+    -moz-opacity: @opacity1;
+
+    /* Safari 1.x */
+    -khtml-opacity: @opacity1;
+
+    /* Good browsers */
+    -webkit-opacity: @opacity1;
+    -moz-opacity: @opacity1;
+    -o-opacity: @opacity1;
+    opacity: @opacity1;
+
+}
+
+.reset-list() {
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+.sprite-icon(@width, @height, @bg-position) {
+
+    background-image: url("/assets/img/icon-sprite.png");
+    background-repeat: no-repeat;
+    background-position: @bg-position;
+    width: @width;
+    height: @height;
+    content: "";
+    display: inline-block;
+    text-indent: -999em;
+
+}
+
+.sprite-icon(@width, @height, @bg-position, @before) when (@before = true) {
+
+    &:before {
+
+        background-image: url("/assets/img/icons.png");
+        background-repeat: no-repeat;
+        background-position: @bg-position;
+        width: @width;
+        height: @height;
+        content: "";
+        display: inline-block;
+        text-indent: -999em;
+
+    }
+
+}
+
+.retina-icon(@width, @height, @bg-position) {
+
+    .sprite-icon(@width, @height, @bg-position);
+    
+    background-size: 270px 165px;
+    background-position: @bg-position;
+    width: @width;
+    height: @height;
+
+    .lt-ie9 & {
+
+        background-image: url("/assets/img/icons@1x.png");
+
+    }
+        
+}
+
+.retina-icon(@width, @height, @bg-position, @before) when (@before = true) {
+
+    .sprite-icon(@width, @height, @bg-position, @before);
+    
+    &:before {
+        
+        background-size: 270px 165px;
+        background-position: @bg-position;
+        width: @width;
+        height: @height;
+
+    }
+
+    .lt-ie9 &:before {
+
+        background-image: url("/assets/img/icons@1x.png");
+
+    }
+
+}
+
+// .button(@color: #fff) {
+
+//     .border-radius(0);
+//     .transition(background-color 250ms ease-in);
+//     background-color: @red-2;
+//     color: @color;
+//     font-size: 18px;
+//     font-size: 1.8rem;
+//     font-weight: 300;
+//     text-align: center;
+//     display: inline-block;
+//     border: none;
+//     // padding: 12px 30px;
+//     padding: 12px 20px;
+
+//     &:focus {
+
+//         color: @color;
+
+//     }
+
+//     &:hover {
+
+//         color: @white;
+//         background-color: lighten(@red-2, 10%);
+
+//     }
+
+//     &.disabled,
+//     &[disabled] {
+
+//         opacity: 0.5;
+//         filter: alpha(opacity=50);
+
+//     }
+
+// }
