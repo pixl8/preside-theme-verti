@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form>
+<form i18nBaseUri="widgets.call_to_action:">
 	<tab>
 		<fieldset>
-			<field binding="call_to_action.label" />
-			<field binding="call_to_action.hide_label" />
-			<field binding="call_to_action.description" />
-			<field binding="call_to_action.button_label" />
-			<field binding="call_to_action.link" />
+			<field binding="call_to_action.label" 		 name="label"        sortorder="10" />
+			<field binding="call_to_action.hide_label"   name="hide_label"   sortorder="20" />
+			<field binding="call_to_action.description"  name="description"  sortorder="30" />
+			<field binding="call_to_action.button_label" name="button_label" sortorder="40" />
+			<field binding="call_to_action.link"         name="link"         sortorder="50" />
 		</fieldset>
 	</tab>
 </form>
