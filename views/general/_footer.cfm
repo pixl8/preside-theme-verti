@@ -1,6 +1,7 @@
 <cfscript>
 	site 	 		    = event.getSite();
 	footer_description  = site.footer_description;
+	footer_copyright    = site.footer_copyright;
 	id                  = site.id;
 	footerlinks 		= site.footer_links;
 	socialmedia 	    = site.footer_socialmedia;
@@ -44,7 +45,7 @@
 				<div class="12u">
 					<div id="copyright">
 						<ul class="menu">
-							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>#footer_copyright#</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</div>
 				</div>

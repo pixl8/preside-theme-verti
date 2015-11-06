@@ -17,6 +17,7 @@
 
 			<field binding="site.footer_socialmedia" sortorder="40" control="objectpicker" object="social_media" sortable="true" quickadd="true" quickedit="true" multiple="true" />
 			<field binding="site.footer_description" sortorder="50" control="richeditor" />
+			<field binding="site.footer_copyright" sortorder="60"   control="richeditor" />
 		</fieldset>
 	</tab>
 </form>

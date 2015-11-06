@@ -4,6 +4,10 @@
 <cfparam name="args.bottom_left"     field="homepage.bottom_left"               editable="true" />
 <cfparam name="args.bottom_right"    field="homepage.bottom_right"              editable="true" />
 
+<cfscript>
+	prc.body_class = "homepage";
+</cfscript>
+
 <cfoutput>
 	<!-- Banner -->
 	<div id="banner-wrapper">
