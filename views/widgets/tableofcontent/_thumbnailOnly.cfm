@@ -36,7 +36,7 @@
 	<cfif _counter eq _records>
 					</div>
 				</div>
-				<a href="##" class="button icon fa-file-text-o">More</a>
+
 			</section>
 		</div>
 	</cfif>
