@@ -2,8 +2,8 @@
 <form i18nBaseUri="page-objects.page:">
 	<tab id="main">
         <fieldset id="main">
-        	<field binding="page.subheading" sortorder="30"/>
-        	<field binding="page.sidebar_content" />
+        	<field binding="page.subheading"      sortorder="30"/>
+        	<field binding="page.sidebar_content" sortorder="70"/>
         </fieldset>
     </tab>
 </form>

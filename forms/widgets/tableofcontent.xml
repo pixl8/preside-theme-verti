@@ -2,8 +2,8 @@
 <form i18nBaseUri="widgets.tableofcontent:">
 	<tab>
 		<fieldset>
-			<field name="heading" control="textinput" />
-			<field name="pages"   control="sitetreepagepicker" multiple="true" sortable="true" object="page" quickadd="true" quickedit="true"  />
+			<field name="heading"      control="textinput" />
+			<field name="pages"        control="sitetreepagepicker" multiple="true" sortable="true" object="page" quickadd="true" quickedit="true"  />
 			<field name="display_mode" control="select" values="linklist,withThumbnail,thumbnailOnly" labels="Link List, With Thumbnail, Thumbnail Only" />
 		</fieldset>
 	</tab>

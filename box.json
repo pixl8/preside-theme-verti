@@ -1,0 +1,19 @@
+{
+    "name":"PresideCMS Extension: DB Upgrade Script Generator",
+    "version":"1.0.1",
+    "author":"Pixl8 Interactive",
+    "createPackageDirectory":true,
+    "packageDirectory":"application/extensions/preside-theme-verti",
+    "homepage":"https://github.com/pixl8/preside-theme-verti",
+    "documentation":"https://github.com/pixl8/preside-theme-verti",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/pixl8/preside-theme-verti"
+    },
+    "bugs":"https://github.com/pixl8/preside-theme-verti",
+    "slug":"preside-theme-verti",
+    "projectURL":"https://github.com/pixl8/preside-theme-verti",
+    "ignore":[
+        "**/.*"
+    ]
+}

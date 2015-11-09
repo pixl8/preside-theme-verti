@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form i18nBaseUri="site:">
-	<tab id="analytics" sortorder="15" title="preside-objects.site:analytics.tab.title">
-		<fieldset id="analytics" sortorder="10">
-			<field binding="site.google_analytics_tags"             sortorder="10" control="textarea" />
-			<field binding="site.google_analytics_verification_tag" sortorder="20" control="textarea" />
-		</fieldset>
-	</tab>
-
 	<tab id="global" sortorder="15" title="preside-objects.site:global.tab.title">
 		<fieldset id="global" sortorder="10">
 
@@ -17,7 +10,7 @@
 
 			<field binding="site.footer_socialmedia" sortorder="40" control="objectpicker" object="social_media" sortable="true" quickadd="true" quickedit="true" multiple="true" />
 			<field binding="site.footer_description" sortorder="50" control="richeditor" />
-			<field binding="site.footer_copyright" sortorder="60"   control="richeditor" />
+			<field binding="site.footer_copyright"   sortorder="60"   control="richeditor" />
 		</fieldset>
 	</tab>
 </form>
