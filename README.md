@@ -1,6 +1,6 @@
 # PresideCMS Extension: Verti Preside Theme
 
-This is an extension for PresideCMS that allows you to create a database upgrade script in preparation for a deployment to another environment.
+This is a free Preside CMS Theme. You can use this theme for your website or use it as a reference for developing a Preside theme. The theme will show you the basic concept of Preside CMS, how to create objects, how to overwrite templates and etc. It's really a good starter template for the beginners.
 
 ## How it works
 
