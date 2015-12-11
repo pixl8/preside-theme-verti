@@ -5,7 +5,7 @@ component output=false {
 		var filterParams 	= {};
 		var orderBy			= "FIELD(id, #listqualify(args.pages,"'")#)";
 		var displayMode		= args.display_mode   ?: "";
-		var prc.heading 	    = args.heading 		  ?: "";
+		var prc.heading 	= args.heading 		  ?: "";
 
 		var view = "/widgets/tableofcontent/_linklist";
 

@@ -9,21 +9,21 @@
 
 	//event.include( "css-bootstrap" );
 
-	event.include( assetId="jq-jquery"                        )
-         .include( assetId="jq-dropotron"              		  )
-         .include( assetId="js-skel"              			  )
-         .include( assetId="js-util"              			  )
-         .include( assetId="js-css-browser"              	  )
-         .include( assetId="js-verti-main"              	  )
+	event.include( assetId="verti-jq-jquery"                  )
+         .include( assetId="verti-jq-dropotron"               )
+         .include( assetId="verti-js-skel"              	  )
+         .include( assetId="verti-js-util"              	  )
+         .include( assetId="verti-js-css-browser"             )
+         .include( assetId="verti-js-verti-main"              )
          .include( assetId="/js/core/"                  	  )
 
-         .include( assetId="css-font-awesome"                 )
-         .include( assetId="css-verti-main"                   )
+         .include( assetId="verti-css-font-awesome"           )
+         .include( assetId="verti-css-verti-main"             )
          .include( assetId="/css/core/"                       )
-         .include( assetId="css-ie8"                       	  )
-         .include( assetId="css-opensans"                     )
-         .include( assetId="js-modernizr"       , group="top" )
-         .include( assetId="js-respond"         , group="top" );
+         .include( assetId="verti-css-ie8"                    )
+         .include( assetId="verti-css-opensans"                     )
+         .include( assetId="verti-js-modernizr"       , group="top" )
+         .include( assetId="verti-js-respond"         , group="top" );
 
 </cfscript>
 

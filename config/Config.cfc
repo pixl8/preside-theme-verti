@@ -5,9 +5,6 @@ component extends="preside.system.config.Config" output=false {
         var conf     = arguments.config;
         var settings = conf.settings ?: {};
 
-        conf.layoutSettings               = conf.layoutSettings ?: {};
-        conf.layoutSettings.defaultLayout = "verti.cfm";
-
         settings.assetManager.derivatives.toc_thumbnail = {
         	 permissions = "inherit"
 			, transformations = [
