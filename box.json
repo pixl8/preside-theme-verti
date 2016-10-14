@@ -1,9 +1,9 @@
 {
     "name":"PresideCMS Extension: Verti Theme",
-    "version":"1.0.1",
-    "location":"https://github.com/pixl8/preside-theme-verti/archive/v1.0.1.zip",
+    "version":"1.0.2",
+    "location":"https://github.com/pixl8/preside-theme-verti/archive/v1.0.2.zip",
     "author":"Pixl8 Interactive",
-    "directory":"application/extensions"
+    "directory":"application/extensions",
     "homepage":"https://github.com/pixl8/preside-theme-verti",
     "documentation":"https://github.com/pixl8/preside-theme-verti",
     "repository":{
